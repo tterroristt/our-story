@@ -355,6 +355,38 @@ a {
     text-align: center;
 }
 
+/* =========================================================
+   TWO-PHOTO POLAROID STACK
+   ========================================================= */
+
+.polaroid-stack {
+  position: relative;
+
+  width: 460px;
+  height: 560px;
+
+  margin: 0 auto;
+}
+
+.polaroid-stack .polaroid {
+  position: absolute;
+
+  width: 330px;
+}
+
+.polaroid--back {
+  top: 20px;
+  left: 0;
+
+  transform: rotate(-5deg);
+}
+
+.polaroid--front {
+  right: 0;
+  bottom: 0;
+
+  transform: rotate(4deg);
+}
 
 /* Memory copy */
 
