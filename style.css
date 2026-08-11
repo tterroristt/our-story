@@ -180,6 +180,33 @@ p {
     text-align: center;
 }
 
+.hero .eyebrow {
+    margin-bottom: 24px;
+
+    color: var(--accent-dark);
+
+    font-family: var(--body-font);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+
+    text-transform: uppercase;
+}
+
+.bebi-title {
+    margin: 0;
+
+    color: var(--accent);
+
+    font-family: var(--heading-font);
+    font-size: clamp(72px, 11vw, 130px);
+    font-style: italic;
+    font-weight: 500;
+
+    line-height: 0.9;
+    letter-spacing: -0.045em;
+}
+
 .hero-content {
     width: min(100%, 760px);
 
