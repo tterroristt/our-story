@@ -23,7 +23,39 @@ body {
 }
 
 @media (max-width: 430px) {
+.future-list {
+    margin-top: 55px;
+}
 
+.future-card {
+    grid-template-columns: 35px 1fr 25px;
+    gap: 15px;
+
+    padding: 28px 0;
+}
+
+.future-card:hover {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.future-card h3 {
+    font-size: 20px;
+}
+
+.future-card p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.future-icon {
+    font-size: 20px;
+}
+
+.future-ending {
+    margin-top: 70px;
+}
+   
     .hero {
         padding:
             calc(30px + env(safe-area-inset-top))
