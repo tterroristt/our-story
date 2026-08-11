@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, viewport-fit=cover"
+    >
 
-    <meta name="theme-color" content="#faf7f2">
+    <meta
+        name="description"
+        content="A little birthday gift for Kai."
+    >
 
-    <meta name="description"
-          content="Our Story — a little collection of memories for Kai.">
+    <meta
+        name="theme-color"
+        content="#faf7f2"
+    >
+
+    <title>for my bebi ♡</title>
+
+
+    <!-- Heart favicon -->
+    <link
+        rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%99%A1%3C/text%3E%3C/svg%3E"
+    >
+
+
+    <!-- Fonts -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
 
     <link
-    rel="icon"
-    href="data:image/svg+xml,
-    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
-        <text y='.9em' font-size='90'>♡</text>
-    </svg>"
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
     >
-    
-    <title>for my bebi</title>
-
-
-    <!-- =====================================================
-         FONTS
-         Cormorant Garamond = headings
-         DM Sans = body text
-         ===================================================== -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@400;500;600&display=swap"
@@ -41,40 +46,42 @@
     >
 
 
-    <!-- CACHE-BUSTED CSS -->
-    <link rel="stylesheet" href="./style.css?v=4">
-
+    <!-- Styles -->
+    <link
+        rel="stylesheet"
+        href="./style.css?v=6"
+    >
 </head>
 
 
 <body>
 
 
-    <!-- =====================================================
+    <!-- ======================================================
          COVER
-         ===================================================== -->
+         ====================================================== -->
 
-    <header class="hero" id="top">
+    <header class="hero">
 
-        <div class="hero-content">
+        <div class="hero__content">
 
             <p class="eyebrow">
-            A LITTLE SOMETHING
+                A LITTLE SOMETHING
             </p>
 
-            <h1 class="bebi-title">
-             for my bebi
+            <h1 class="hero__title">
+                for my bebi
             </h1>
 
         </div>
 
 
-        <div class="scroll-indicator" aria-hidden="true">
-
+        <div
+            class="scroll-hint"
+            aria-hidden="true"
+        >
             <span>scroll</span>
-
-            <div class="scroll-line"></div>
-
+            <span class="scroll-hint__line"></span>
         </div>
 
     </header>
@@ -84,20 +91,27 @@
     <main>
 
 
-        <!-- =====================================================
-             INTRO
-             ===================================================== -->
+        <!-- ==================================================
+             STORY INTRO
+             ================================================== -->
 
-        <section class="intro" id="story">
+        <section
+            class="story-intro"
+            id="story"
+        >
 
-            <div class="section-inner reveal">
+            <div class="content content--narrow reveal">
 
-                <h2>
+                <p class="section-label">
+                    OUR STORY
+                </p>
+
+                <h2 class="display-heading">
                     It started with<br>
                     <em>little moments.</em>
                 </h2>
 
-                <p>
+                <p class="intro-copy">
                     And somehow, those little moments became
                     some of the most important memories in my life.
                 </p>
@@ -108,61 +122,60 @@
 
 
 
-        <!-- =====================================================
+        <!-- ==================================================
              MEMORY 01
-             ===================================================== -->
+             ================================================== -->
 
-        <section class="memory-section">
+        <section class="memory">
 
-            <div class="memory-container">
+            <div class="memory__layout">
 
+                <div class="memory__photo reveal">
 
-                <div class="memory-photo reveal">
+                    <figure class="polaroid polaroid--left">
 
-                    <figure class="polaroid rotate-left">
-
-                        <div class="photo-wrapper">
+                        <div class="polaroid__image">
 
                             <img
                                 src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1000&q=85"
-                                alt="A placeholder photo for our first memory"
+                                alt="Placeholder for our first memory"
+                                loading="lazy"
                             >
 
                         </div>
 
-                        <p>
+                        <figcaption>
                             the beginning
-                        </p>
+                        </figcaption>
 
                     </figure>
 
                 </div>
 
 
-                <div class="memory-content reveal">
+                <div class="memory__copy reveal">
 
-                    <span class="chapter-number">
+                    <span class="memory__number">
                         01
                     </span>
 
-                    <p class="memory-date">
+                    <p class="memory__meta">
                         DATE · PLACE
                     </p>
 
-                    <h2>
+                    <h2 class="memory__title">
                         The<br>
                         <em>beginning.</em>
                     </h2>
 
-                    <p class="memory-text">
-                        Write about one of the first memories
-                        you want to keep here. It can be your first
-                        date, the first time you met, or simply a
-                        moment you still think about.
+                    <p class="memory__text">
+                        Write about one of the first memories you
+                        want to keep here. It can be your first date,
+                        the first time you met, or simply a moment
+                        you still think about.
                     </p>
 
                 </div>
-
 
             </div>
 
@@ -170,31 +183,30 @@
 
 
 
-        <!-- =====================================================
+        <!-- ==================================================
              MEMORY 02
-             ===================================================== -->
+             ================================================== -->
 
-        <section class="memory-section alternate">
+        <section class="memory memory--soft">
 
-            <div class="memory-container">
+            <div class="memory__layout">
 
+                <div class="memory__copy reveal">
 
-                <div class="memory-content reveal">
-
-                    <span class="chapter-number">
+                    <span class="memory__number">
                         02
                     </span>
 
-                    <p class="memory-date">
+                    <p class="memory__meta">
                         DATE · PLACE
                     </p>
 
-                    <h2>
+                    <h2 class="memory__title">
                         One of my<br>
                         <em>favorite days.</em>
                     </h2>
 
-                    <p class="memory-text">
+                    <p class="memory__text">
                         Maybe nothing huge happened that day.
                         Maybe it was just us spending time together.
                         Somehow, those are usually the memories
@@ -204,27 +216,27 @@
                 </div>
 
 
-                <div class="memory-photo reveal">
+                <div class="memory__photo reveal">
 
-                    <figure class="polaroid rotate-right">
+                    <figure class="polaroid polaroid--right">
 
-                        <div class="photo-wrapper">
+                        <div class="polaroid__image">
 
                             <img
                                 src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=1000&q=85"
-                                alt="A placeholder photo for another memory"
+                                alt="Placeholder for one of our favorite days"
+                                loading="lazy"
                             >
 
                         </div>
 
-                        <p>
+                        <figcaption>
                             one of many
-                        </p>
+                        </figcaption>
 
                     </figure>
 
                 </div>
-
 
             </div>
 
@@ -232,53 +244,53 @@
 
 
 
-        <!-- =====================================================
+        <!-- ==================================================
              MEMORY 03
-             ===================================================== -->
+             ================================================== -->
 
-        <section class="memory-section">
+        <section class="memory">
 
-            <div class="memory-container">
+            <div class="memory__layout">
 
+                <div class="memory__photo reveal">
 
-                <div class="memory-photo reveal">
+                    <figure class="polaroid polaroid--left">
 
-                    <figure class="polaroid rotate-left">
-
-                        <div class="photo-wrapper">
+                        <div class="polaroid__image">
 
                             <img
                                 src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=1000&q=85"
-                                alt="A placeholder photo for another date"
+                                alt="Placeholder for another memory"
+                                loading="lazy"
                             >
 
                         </div>
 
-                        <p>
+                        <figcaption>
                             just us
-                        </p>
+                        </figcaption>
 
                     </figure>
 
                 </div>
 
 
-                <div class="memory-content reveal">
+                <div class="memory__copy reveal">
 
-                    <span class="chapter-number">
+                    <span class="memory__number">
                         03
                     </span>
 
-                    <p class="memory-date">
+                    <p class="memory__meta">
                         DATE · PLACE
                     </p>
 
-                    <h2>
+                    <h2 class="memory__title">
                         Just us<br>
                         <em>being us.</em>
                     </h2>
 
-                    <p class="memory-text">
+                    <p class="memory__text">
                         This can be one of those memories that
                         probably doesn't mean much to anyone else,
                         but means everything to us.
@@ -286,98 +298,100 @@
 
                 </div>
 
-
             </div>
 
         </section>
 
 
 
-        <!-- =====================================================
+        <!-- ==================================================
              MEMORY 04
-             ===================================================== -->
+             ================================================== -->
 
-        <section class="memory-section alternate">
+        <section class="memory memory--soft">
 
-            <div class="memory-container">
+            <div class="memory__layout">
 
+                <div class="memory__copy reveal">
 
-                <div class="memory-content reveal">
-
-                    <span class="chapter-number">
+                    <span class="memory__number">
                         04
                     </span>
 
-                    <p class="memory-date">
+                    <p class="memory__meta">
                         DATE · PLACE
                     </p>
 
-                    <h2>
+                    <h2 class="memory__title">
                         Another little<br>
                         <em>chapter.</em>
                     </h2>
 
-                    <p class="memory-text">
-                        Another date, another picture, another
-                        memory that became part of our story.
+                    <p class="memory__text">
+                        Another date, another picture,
+                        another memory that became part
+                        of our story.
                     </p>
 
                 </div>
 
 
-                <div class="memory-photo reveal">
+                <div class="memory__photo reveal">
 
-                    <figure class="polaroid rotate-right">
+                    <figure class="polaroid polaroid--right">
 
-                        <div class="photo-wrapper">
+                        <div class="polaroid__image">
 
                             <img
                                 src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1000&q=85"
-                                alt="A placeholder photograph for another memory"
+                                alt="Placeholder for another chapter"
+                                loading="lazy"
                             >
 
                         </div>
 
-                        <p>
+                        <figcaption>
                             another chapter
-                        </p>
+                        </figcaption>
 
                     </figure>
 
                 </div>
 
-
             </div>
 
         </section>
 
 
 
-        <!-- =====================================================
+        <!-- ==================================================
              STILL TO COME
-             ===================================================== -->
+             ================================================== -->
 
-        <section class="future-section">
+        <section class="future">
 
-            <div class="future-inner reveal">
+            <div class="content content--narrow reveal">
 
-                <span class="chapter-label">
+                <p class="section-label">
                     STILL TO COME
-                </span>
+                </p>
 
-                <h2>
+                <h2 class="future__title">
                     More places.<br>
                     More photographs.<br>
                     <em>More us.</em>
                 </h2>
 
-                <div class="future-divider"></div>
+                <span class="small-divider"></span>
 
-                <p>
+                <p class="future__copy">
                     And there's still so much more to come.
                 </p>
 
-                <span class="future-heart" aria-hidden="true">
+                <span
+                    class="subtle-heart"
+                    aria-hidden="true"
+                >
                     ♡
                 </span>
 
@@ -387,19 +401,19 @@
 
 
 
-        <!-- =====================================================
+        <!-- ==================================================
              LETTER
-             ===================================================== -->
+             ================================================== -->
 
         <section class="letter-section">
 
-            <div class="letter-container reveal">
+            <div class="letter-wrapper reveal">
 
-                <span class="chapter-label">
+                <p class="section-label">
                     A LETTER FOR YOU
-                </span>
+                </p>
 
-                <h2>
+                <h2 class="letter-heading">
                     Dear Kai,
                 </h2>
 
@@ -442,15 +456,15 @@
                     </p>
 
 
-                    <div class="signature">
-
-                        With all my love,
-
-                        <br>
+                    <div class="letter__signature">
 
                         <span>
-                            ♡ Me
+                            With all my love,
                         </span>
+
+                        <strong>
+                            ♡ Me
+                        </strong>
 
                     </div>
 
@@ -462,41 +476,154 @@
 
 
 
-        <!-- =====================================================
-             ENDING
-             ===================================================== -->
+        <!-- ==================================================
+             BIRTHDAY MESSAGE
+             ================================================== -->
 
-        <section class="final-section">
+        <section class="birthday">
 
-            <div class="final-content reveal">
+            <div class="birthday__content reveal">
 
-                <div class="final-heart" aria-hidden="true">
+                <span
+                    class="birthday__heart"
+                    aria-hidden="true"
+                >
                     ♡
-                </div>
+                </span>
 
                 <p class="eyebrow">
                     AND THIS IS ONLY THE BEGINNING
                 </p>
 
-                <h2>
+                <h2 class="birthday__title">
                     Happy Birthday,<br>
-                    <span>Kai.</span>
+                    <em>Kai.</em>
                 </h2>
 
-                <p>
+                <p class="birthday__copy">
                     Here's to every date we haven't gone on,
                     every picture we haven't taken,
                     and every memory we haven't made yet.
                 </p>
 
+            </div>
 
-                <button
-                    class="replay-button"
-                    id="replayButton"
-                    type="button"
+        </section>
+
+
+
+        <!-- ==================================================
+             INTERACTIVE BIRTHDAY CAKE
+             ================================================== -->
+
+        <section
+            class="cake-section"
+            id="cakeSection"
+        >
+
+            <div class="cake-section__content reveal">
+
+                <p class="section-label">
+                    ONE LAST THING
+                </p>
+
+                <h2 class="cake-section__title">
+                    Make a wish.
+                </h2>
+
+                <p
+                    class="cake-section__instruction"
+                    id="cakeInstruction"
                 >
-                    ↻ &nbsp; Start our story again
-                </button>
+                    tap below when you're ready ♡
+                </p>
+
+
+                <!-- Cake -->
+
+                <div
+                    class="cake"
+                    id="cake"
+                    role="img"
+                    aria-label="Birthday cake with three lit candles"
+                >
+
+                    <div class="candles">
+
+                        <span class="candle">
+                            <span class="flame"></span>
+                        </span>
+
+                        <span class="candle">
+                            <span class="flame"></span>
+                        </span>
+
+                        <span class="candle">
+                            <span class="flame"></span>
+                        </span>
+
+                    </div>
+
+
+                    <div class="cake__top"></div>
+
+
+                    <div class="cake__body">
+
+                        <span class="icing icing--one"></span>
+                        <span class="icing icing--two"></span>
+                        <span class="icing icing--three"></span>
+
+                    </div>
+
+
+                    <div class="cake__plate"></div>
+
+                </div>
+
+
+                <!-- Controls -->
+
+                <div class="cake-controls">
+
+                    <button
+                        class="pill-button"
+                        id="wishButton"
+                        type="button"
+                    >
+                        make a wish ♡
+                    </button>
+
+
+                    <button
+                        class="pill-button pill-button--secondary"
+                        id="tapBlowButton"
+                        type="button"
+                        hidden
+                    >
+                        tap to blow instead
+                    </button>
+
+                </div>
+
+
+                <!-- Message shown after candles are blown -->
+
+                <div
+                    class="wish-result"
+                    id="wishResult"
+                    aria-live="polite"
+                >
+
+                    <span aria-hidden="true">
+                        ♡
+                    </span>
+
+                    <p>
+                        happy birthday, my bebi.
+                    </p>
+
+                </div>
 
             </div>
 
@@ -505,26 +632,7 @@
 
     </main>
 
-
-
-    <!-- =====================================================
-         FOOTER
-         ===================================================== -->
-
-    <footer>
-
-        <p>
-            made with ♡ for Kai
-        </p>
-
-    </footer>
-
-
-
-    <!-- CACHE-BUSTED JAVASCRIPT -->
-    <script src="./script.js?v=4"></script>
-
+    <script src="./script.js?v=6"></script>
 
 </body>
-
 </html>
