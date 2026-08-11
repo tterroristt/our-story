@@ -359,34 +359,47 @@ a {
    TWO-PHOTO POLAROID STACK
    ========================================================= */
 
-.polaroid-stack {
-  position: relative;
+  .polaroid-stack {
+    position: relative;
 
-  width: 460px;
-  height: 560px;
+    width: 100%;
+    max-width: 330px;
+    height: 360px;
 
-  margin: 0 auto;
-}
+    margin: 0 auto;
+  }
 
-.polaroid-stack .polaroid {
-  position: absolute;
+  .polaroid-stack .polaroid {
+    position: absolute;
 
-  width: 330px;
-}
+    width: 205px;
+    padding: 8px 8px 27px;
+  }
 
-.polaroid--back {
-  top: 20px;
-  left: 0;
+  .polaroid-stack .polaroid__image {
+    aspect-ratio: 4 / 5;
+  }
 
-  transform: rotate(-5deg);
-}
+  .polaroid-stack .polaroid figcaption {
+    margin-top: 8px;
 
-.polaroid--front {
-  right: 0;
-  bottom: 0;
+    font-size: 9px;
+  }
 
-  transform: rotate(4deg);
-}
+  .polaroid--back {
+    top: 5px;
+    left: 5px;
+
+    transform: rotate(-5deg);
+  }
+
+  .polaroid--front {
+    top: 105px;
+    right: 5px;
+    bottom: auto;
+
+    transform: rotate(4deg);
+  }
 
 /* Memory copy */
 
