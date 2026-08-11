@@ -1,63 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Our Story — A little collection of memories for Kai.">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <meta name="theme-color" content="#faf7f2">
+
+    <meta name="description"
+          content="Our Story — a little collection of memories for Kai.">
+
     <title>Our Story ♡</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css">
+    <!-- =====================================================
+         FONTS
+         Cormorant Garamond = headings
+         DM Sans = body text
+         ===================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- CACHE-BUSTED CSS -->
+    <link rel="stylesheet" href="./style.css?v=4">
+
 </head>
+
 
 <body>
 
-    <!-- ==================== HERO ==================== -->
+
+    <!-- =====================================================
+         COVER
+         ===================================================== -->
 
     <header class="hero" id="top">
 
         <div class="hero-content">
 
-            <p class="eyebrow">A little something for you</p>
+            <p class="eyebrow">
+                A LITTLE SOMETHING FOR YOU
+            </p>
 
             <h1>
-                Our<br>
+                Our
                 <span>Story</span>
             </h1>
 
             <p class="hero-subtitle">
-                A collection of little moments<br>
+                A collection of little moments
                 that became my favorite memories.
             </p>
 
             <a href="#story" class="start-button">
+
                 Start the story
-                <span>↓</span>
+
+                <span aria-hidden="true">↓</span>
+
             </a>
 
         </div>
 
-        <div class="scroll-indicator">
+
+        <div class="scroll-indicator" aria-hidden="true">
+
             <span>scroll</span>
+
             <div class="scroll-line"></div>
+
         </div>
 
     </header>
 
 
-    <!-- ==================== STORY ==================== -->
 
-    <main id="story">
+    <main>
 
-        <section class="intro section">
+
+        <!-- =====================================================
+             INTRO
+             ===================================================== -->
+
+        <section class="intro" id="story">
 
             <div class="section-inner reveal">
 
-                <span class="chapter-label">OUR STORY</span>
+                <span class="chapter-label">
+                    OUR STORY
+                </span>
 
                 <h2>
                     It started with<br>
@@ -65,8 +108,8 @@
                 </h2>
 
                 <p>
-                    And somehow, those little moments became some
-                    of the most important memories in my life.
+                    And somehow, those little moments became
+                    some of the most important memories in my life.
                 </p>
 
             </div>
@@ -74,32 +117,43 @@
         </section>
 
 
-        <!-- ==================== CHAPTER 01 ==================== -->
+
+        <!-- =====================================================
+             MEMORY 01
+             ===================================================== -->
 
         <section class="memory-section">
 
-            <div class="memory-container reveal">
+            <div class="memory-container">
 
-                <div class="memory-photo">
 
-                    <div class="polaroid rotate-left">
+                <div class="memory-photo reveal">
+
+                    <figure class="polaroid rotate-left">
 
                         <div class="photo-wrapper">
+
                             <img
-                                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80"
-                                alt="Memory placeholder"
+                                src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1000&q=85"
+                                alt="A placeholder photo for our first memory"
                             >
+
                         </div>
 
-                        <p>the beginning ♡</p>
+                        <p>
+                            the beginning
+                        </p>
 
-                    </div>
+                    </figure>
 
                 </div>
 
-                <div class="memory-content">
 
-                    <span class="chapter-number">01</span>
+                <div class="memory-content reveal">
+
+                    <span class="chapter-number">
+                        01
+                    </span>
 
                     <p class="memory-date">
                         DATE · PLACE
@@ -107,34 +161,39 @@
 
                     <h2>
                         The<br>
-                        beginning.
+                        <em>beginning.</em>
                     </h2>
 
                     <p class="memory-text">
-                        This is where you can write about the first
-                        memory you want Kai to see. Maybe it's your
-                        first date, the first time you met, or simply
-                        a moment that means a lot to you.
+                        Write about one of the first memories
+                        you want to keep here. It can be your first
+                        date, the first time you met, or simply a
+                        moment you still think about.
                     </p>
 
-                    <span class="heart-divider">♡</span>
-
                 </div>
+
 
             </div>
 
         </section>
 
 
-        <!-- ==================== CHAPTER 02 ==================== -->
+
+        <!-- =====================================================
+             MEMORY 02
+             ===================================================== -->
 
         <section class="memory-section alternate">
 
-            <div class="memory-container reveal">
+            <div class="memory-container">
 
-                <div class="memory-content">
 
-                    <span class="chapter-number">02</span>
+                <div class="memory-content reveal">
+
+                    <span class="chapter-number">
+                        02
+                    </span>
 
                     <p class="memory-date">
                         DATE · PLACE
@@ -146,63 +205,79 @@
                     </h2>
 
                     <p class="memory-text">
-                        Maybe it was something completely ordinary.
-                        Maybe we didn't even realize how special
-                        the day would become.
+                        Maybe nothing huge happened that day.
+                        Maybe it was just us spending time together.
+                        Somehow, those are usually the memories
+                        I end up loving the most.
                     </p>
 
-                    <span class="heart-divider">♡</span>
-
                 </div>
 
-                <div class="memory-photo">
 
-                    <div class="polaroid rotate-right">
+                <div class="memory-photo reveal">
+
+                    <figure class="polaroid rotate-right">
 
                         <div class="photo-wrapper">
+
                             <img
-                                src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=900&q=80"
-                                alt="Memory placeholder"
+                                src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=1000&q=85"
+                                alt="A placeholder photo for another memory"
                             >
+
                         </div>
 
-                        <p>one of many ♡</p>
+                        <p>
+                            one of many
+                        </p>
 
-                    </div>
+                    </figure>
 
                 </div>
+
 
             </div>
 
         </section>
 
 
-        <!-- ==================== CHAPTER 03 ==================== -->
+
+        <!-- =====================================================
+             MEMORY 03
+             ===================================================== -->
 
         <section class="memory-section">
 
-            <div class="memory-container reveal">
+            <div class="memory-container">
 
-                <div class="memory-photo">
 
-                    <div class="polaroid rotate-left">
+                <div class="memory-photo reveal">
+
+                    <figure class="polaroid rotate-left">
 
                         <div class="photo-wrapper">
+
                             <img
-                                src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=900&q=80"
-                                alt="Memory placeholder"
+                                src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=1000&q=85"
+                                alt="A placeholder photo for another date"
                             >
+
                         </div>
 
-                        <p>another memory ♡</p>
+                        <p>
+                            just us
+                        </p>
 
-                    </div>
+                    </figure>
 
                 </div>
 
-                <div class="memory-content">
 
-                    <span class="chapter-number">03</span>
+                <div class="memory-content reveal">
+
+                    <span class="chapter-number">
+                        03
+                    </span>
 
                     <p class="memory-date">
                         DATE · PLACE
@@ -214,190 +289,132 @@
                     </h2>
 
                     <p class="memory-text">
-                        Add one of those memories that might not
-                        sound important to anyone else, but means
-                        everything to you.
+                        This can be one of those memories that
+                        probably doesn't mean much to anyone else,
+                        but means everything to us.
                     </p>
 
-                    <span class="heart-divider">♡</span>
-
                 </div>
+
 
             </div>
 
         </section>
 
 
-        <!-- ==================== CHAPTER 04 ==================== -->
+
+        <!-- =====================================================
+             MEMORY 04
+             ===================================================== -->
 
         <section class="memory-section alternate">
 
-            <div class="memory-container reveal">
+            <div class="memory-container">
 
-                <div class="memory-content">
 
-                    <span class="chapter-number">04</span>
+                <div class="memory-content reveal">
+
+                    <span class="chapter-number">
+                        04
+                    </span>
 
                     <p class="memory-date">
                         DATE · PLACE
                     </p>
 
                     <h2>
-                        And then<br>
-                        <em>there was this.</em>
+                        Another little<br>
+                        <em>chapter.</em>
                     </h2>
 
                     <p class="memory-text">
-                        This section can be another date, trip,
-                        celebration, random adventure, or literally
-                        anything you want to remember.
+                        Another date, another picture, another
+                        memory that became part of our story.
                     </p>
 
-                    <span class="heart-divider">♡</span>
-
                 </div>
 
-                <div class="memory-photo">
 
-                    <div class="polaroid rotate-right">
+                <div class="memory-photo reveal">
+
+                    <figure class="polaroid rotate-right">
 
                         <div class="photo-wrapper">
+
                             <img
-                                src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=900&q=80"
-                                alt="Memory placeholder"
+                                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1000&q=85"
+                                alt="A placeholder photograph for another memory"
                             >
+
                         </div>
 
-                        <p>still smiling ♡</p>
+                        <p>
+                            another chapter
+                        </p>
 
-                    </div>
+                    </figure>
 
                 </div>
+
 
             </div>
 
         </section>
 
 
-       <!-- ==================== STILL TO COME ==================== -->
 
-        <section class="future-section section">
+        <!-- =====================================================
+             STILL TO COME
+             ===================================================== -->
 
-            <div class="section-inner">
+        <section class="future-section">
 
-                <div class="future-heading reveal">
+            <div class="future-inner reveal">
 
-            <span class="chapter-label">STILL TO COME</span>
+                <span class="chapter-label">
+                    STILL TO COME
+                </span>
 
-            <h2>
-                We still have so much<br>
-                <em>left to experience.</em>
-            </h2>
+                <h2>
+                    More places.<br>
+                    More photographs.<br>
+                    <em>More us.</em>
+                </h2>
 
-            <p class="section-description">
-                These memories mean everything to me.
-                But my favorite part is knowing that our story
-                isn't finished yet.
-            </p>
+                <div class="future-divider"></div>
+
+                <p>
+                    And there's still so much more to come.
+                </p>
+
+                <span class="future-heart" aria-hidden="true">
+                    ♡
+                </span>
 
             </div>
 
-
-            <div class="future-list">
-
-            <div class="future-card reveal">
-                <span class="future-number">01</span>
-
-            <div>
-                    <h3>More dates</h3>
-
-                    <p>
-                        More places to go, food to try,
-                        and random plans that somehow become
-                        some of our favorite days.
-                    </p>
-                </div>
-
-                <span class="future-icon">♡</span>
-            </div>
+        </section>
 
 
-            <div class="future-card reveal">
-                <span class="future-number">02</span>
 
-                <div>
-                    <h3>More pictures</h3>
+        <!-- =====================================================
+             LETTER
+             ===================================================== -->
 
-                    <p>
-                        More photos that we'll look back on someday
-                        and wonder how time passed so quickly.
-                    </p>
-                </div>
-
-                <span class="future-icon">✦</span>
-            </div>
-
-
-            <div class="future-card reveal">
-                <span class="future-number">03</span>
-
-                <div>
-                    <h3>More ordinary days</h3>
-
-                    <p>
-                        Because even the days where nothing special
-                        happens feel special when I'm spending them
-                        with you.
-                    </p>
-                </div>
-
-                <span class="future-icon">♡</span>
-            </div>
-
-
-            <div class="future-card reveal">
-                <span class="future-number">04</span>
-
-                <div>
-                    <h3>More of us</h3>
-
-                    <p>
-                        More laughing, growing, exploring,
-                        and figuring life out together.
-                    </p>
-                </div>
-
-                <span class="future-icon">✧</span>
-            </div>
-
-        </div>
-
-
-        <div class="future-ending reveal">
-
-    <div class="future-ending-line"></div>
-
-    <span class="future-ending-label">AND THERE'S STILL MORE TO COME</span>
-            
-    <span class="future-ending-heart">♡</span>
-
-    </div>
-                
-</section>
-
-        <!-- ==================== LOVE LETTER ==================== -->
-
-        <section class="letter-section section">
+        <section class="letter-section">
 
             <div class="letter-container reveal">
 
-                <span class="chapter-label">A LETTER FOR YOU</span>
+                <span class="chapter-label">
+                    A LETTER FOR YOU
+                </span>
 
                 <h2>
                     Dear Kai,
                 </h2>
 
-                <div class="letter">
+
+                <article class="letter">
 
                     <p>
                         Happy birthday to one of the most important
@@ -408,14 +425,14 @@
                         I don't think I say it enough, but I really
                         appreciate you. I appreciate every moment
                         we've spent together, every conversation,
-                        every laugh, every little memory that we've
+                        every laugh, and every little memory we've
                         made along the way.
                     </p>
 
                     <p>
-                        Looking back at all these moments makes me
-                        realize just how lucky I am to have you in
-                        my life.
+                        Looking back at all of these moments makes
+                        me realize just how lucky I am to have you
+                        in my life.
                     </p>
 
                     <p>
@@ -434,25 +451,38 @@
                         and all the ones we haven't made yet.
                     </p>
 
+
                     <div class="signature">
-                        With all my love,<br>
-                        <span>♡ Me</span>
+
+                        With all my love,
+
+                        <br>
+
+                        <span>
+                            ♡ Me
+                        </span>
+
                     </div>
 
-                </div>
+                </article>
 
             </div>
 
         </section>
 
 
-        <!-- ==================== FINAL ==================== -->
+
+        <!-- =====================================================
+             ENDING
+             ===================================================== -->
 
         <section class="final-section">
 
             <div class="final-content reveal">
 
-                <div class="final-heart">♡</div>
+                <div class="final-heart" aria-hidden="true">
+                    ♡
+                </div>
 
                 <p class="eyebrow">
                     AND THIS IS ONLY THE BEGINNING
@@ -464,12 +494,17 @@
                 </h2>
 
                 <p>
-                    Here's to every date we haven't gone on,<br>
-                    every picture we haven't taken,<br>
+                    Here's to every date we haven't gone on,
+                    every picture we haven't taken,
                     and every memory we haven't made yet.
                 </p>
 
-                <button class="replay-button" id="replayButton">
+
+                <button
+                    class="replay-button"
+                    id="replayButton"
+                    type="button"
+                >
                     ↻ &nbsp; Start our story again
                 </button>
 
@@ -477,17 +512,29 @@
 
         </section>
 
+
     </main>
 
 
-    <!-- ==================== FOOTER ==================== -->
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
 
     <footer>
-        <p>made with ♡ for Kai</p>
+
+        <p>
+            made with ♡ for Kai
+        </p>
+
     </footer>
 
 
-    <script src="script.js"></script>
+
+    <!-- CACHE-BUSTED JAVASCRIPT -->
+    <script src="./script.js?v=4"></script>
+
 
 </body>
+
 </html>
