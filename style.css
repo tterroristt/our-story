@@ -135,20 +135,25 @@ body {
         min-height: 44px;
     }
 }
+
 :root {
-    --background: #fffaf7;
-    --background-soft: #fff3f0;
-    --pink: #e98f9d;
-    --pink-dark: #c96f7c;
-    --text: #40363a;
-    --text-light: #817477;
-    --white: #ffffff;
-    --line: #eadbdd;
+    --background: #f8f4ee;
+    --background-soft: #f1eae3;
 
-    --heading-font: "DM Sans", sans-serif;
-    --script-font: "Pacifico", cursive;
+    --paper: #fffdf9;
 
-    --max-width: 1100px;
+    --text: #292524;
+    --text-light: #756b66;
+
+    --accent: #d98291;
+    --accent-dark: #b96070;
+
+    --line: rgba(41, 37, 36, 0.12);
+
+    --heading-font: "Cormorant Garamond", serif;
+    --body-font: "DM Sans", sans-serif;
+
+    --max-width: 1080px;
 }
 
 
@@ -167,6 +172,7 @@ html {
 }
 
 body {
+    font-family: var(--body-font);
     background: var(--background);
     color: var(--text);
     font-family: var(--heading-font);
