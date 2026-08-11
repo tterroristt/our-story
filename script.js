@@ -129,7 +129,7 @@ function blowOutCandles() {
 
 
     cakeInstruction.textContent =
-        "you got them ♡";
+        "you got them!";
 
 
     wishButton.hidden = true;
@@ -421,7 +421,7 @@ async function startBlowDetection() {
 
 
     cakeInstruction.textContent =
-        "allow microphone access ♡";
+        "allow microphone access";
 
 
     try {
@@ -533,7 +533,7 @@ async function startBlowDetection() {
 
 
         cakeInstruction.textContent =
-            "okay… blow out the candles ♡";
+            "okay… blow out the candles";
 
 
         listenForBlow(
@@ -574,7 +574,7 @@ function showTapFallback() {
 
 
     cakeInstruction.textContent =
-        "you can still make your wish ♡";
+        "you can still make your wish";
 
 }
 
