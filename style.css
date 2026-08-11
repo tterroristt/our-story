@@ -986,6 +986,11 @@ footer p {
 
     /* ---------------- HERO ---------------- */
 
+    .bebi-title {
+    font-size: 74px;
+    line-height: 0.92;
+   }
+   
     .hero {
         padding:
             calc(60px + env(safe-area-inset-top))
