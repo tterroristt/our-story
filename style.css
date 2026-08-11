@@ -53,7 +53,48 @@ body {
 }
 
 .future-ending {
-    margin-top: 70px;
+    max-width: 650px;
+    margin: 90px auto 0;
+    text-align: center;
+}
+
+.future-ending-line {
+    width: 60px;
+    height: 1px;
+    margin: 0 auto 30px;
+    background: var(--pink);
+}
+
+.future-ending-label {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: var(--pink-dark);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+}
+
+.future-ending p {
+    color: var(--text);
+
+    font-family: var(--heading-font);
+    font-size: clamp(24px, 4vw, 38px);
+    font-weight: 600;
+
+    line-height: 1.35;
+    letter-spacing: -0.03em;
+}
+
+.future-ending-heart {
+    display: block;
+
+    margin-top: 25px;
+
+    color: var(--pink);
+    font-size: 24px;
 }
    
     .hero {
@@ -913,6 +954,20 @@ footer {
     .start-button,
     .replay-button {
         min-height: 44px;
+    }
+
+   .future-ending {
+        margin-top: 65px;
+        padding: 0 10px;
+    }
+
+    .future-ending p {
+        font-size: 27px;
+        line-height: 1.35;
+    }
+
+    .future-ending-label {
+        font-size: 9px;
     }
 }
 
