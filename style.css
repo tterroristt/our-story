@@ -1,465 +1,769 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Our Story — A little collection of memories for Kai.">
-    <title>Our Story ♡</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <!-- Floating decorations -->
-    <div class="floating-decorations" aria-hidden="true">
-        <span>♡</span>
-        <span>✦</span>
-        <span>♡</span>
-        <span>✧</span>
-        <span>♡</span>
-        <span>✦</span>
-    </div>
-
-    <!-- ==================== HERO ==================== -->
-
-    <header class="hero" id="top">
-
-        <div class="hero-content">
-
-            <p class="eyebrow">A little something for you</p>
-
-            <h1>
-                Our<br>
-                <span>Story</span>
-            </h1>
-
-            <p class="hero-subtitle">
-                A collection of little moments<br>
-                that became my favorite memories.
-            </p>
-
-            <a href="#story" class="start-button">
-                Start the story
-                <span>↓</span>
-            </a>
-
-        </div>
-
-        <div class="scroll-indicator">
-            <span>scroll</span>
-            <div class="scroll-line"></div>
-        </div>
-
-    </header>
-
-
-    <!-- ==================== STORY ==================== -->
-
-    <main id="story">
-
-        <section class="intro section">
-
-            <div class="section-inner reveal">
-
-                <span class="chapter-label">OUR STORY</span>
-
-                <h2>
-                    It started with<br>
-                    <em>little moments.</em>
-                </h2>
-
-                <p>
-                    And somehow, those little moments became some
-                    of the most important memories in my life.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- ==================== CHAPTER 01 ==================== -->
-
-        <section class="memory-section">
-
-            <div class="memory-container reveal">
-
-                <div class="memory-photo">
-
-                    <div class="polaroid rotate-left">
-
-                        <div class="photo-wrapper">
-                            <img
-                                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80"
-                                alt="Memory placeholder"
-                            >
-                        </div>
-
-                        <p>the beginning ♡</p>
-
-                    </div>
-
-                </div>
-
-                <div class="memory-content">
-
-                    <span class="chapter-number">01</span>
-
-                    <p class="memory-date">
-                        DATE · PLACE
-                    </p>
-
-                    <h2>
-                        The<br>
-                        beginning.
-                    </h2>
-
-                    <p class="memory-text">
-                        This is where you can write about the first
-                        memory you want Kai to see. Maybe it's your
-                        first date, the first time you met, or simply
-                        a moment that means a lot to you.
-                    </p>
-
-                    <span class="heart-divider">♡</span>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ==================== CHAPTER 02 ==================== -->
-
-        <section class="memory-section alternate">
-
-            <div class="memory-container reveal">
-
-                <div class="memory-content">
-
-                    <span class="chapter-number">02</span>
-
-                    <p class="memory-date">
-                        DATE · PLACE
-                    </p>
-
-                    <h2>
-                        One of my<br>
-                        <em>favorite days.</em>
-                    </h2>
-
-                    <p class="memory-text">
-                        Maybe it was something completely ordinary.
-                        Maybe we didn't even realize how special
-                        the day would become.
-                    </p>
-
-                    <span class="heart-divider">♡</span>
-
-                </div>
-
-                <div class="memory-photo">
-
-                    <div class="polaroid rotate-right">
-
-                        <div class="photo-wrapper">
-                            <img
-                                src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=900&q=80"
-                                alt="Memory placeholder"
-                            >
-                        </div>
-
-                        <p>one of many ♡</p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ==================== CHAPTER 03 ==================== -->
-
-        <section class="memory-section">
-
-            <div class="memory-container reveal">
-
-                <div class="memory-photo">
-
-                    <div class="polaroid rotate-left">
-
-                        <div class="photo-wrapper">
-                            <img
-                                src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=900&q=80"
-                                alt="Memory placeholder"
-                            >
-                        </div>
-
-                        <p>another memory ♡</p>
-
-                    </div>
-
-                </div>
-
-                <div class="memory-content">
-
-                    <span class="chapter-number">03</span>
-
-                    <p class="memory-date">
-                        DATE · PLACE
-                    </p>
-
-                    <h2>
-                        Just us<br>
-                        <em>being us.</em>
-                    </h2>
-
-                    <p class="memory-text">
-                        Add one of those memories that might not
-                        sound important to anyone else, but means
-                        everything to you.
-                    </p>
-
-                    <span class="heart-divider">♡</span>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ==================== CHAPTER 04 ==================== -->
-
-        <section class="memory-section alternate">
-
-            <div class="memory-container reveal">
-
-                <div class="memory-content">
-
-                    <span class="chapter-number">04</span>
-
-                    <p class="memory-date">
-                        DATE · PLACE
-                    </p>
-
-                    <h2>
-                        And then<br>
-                        <em>there was this.</em>
-                    </h2>
-
-                    <p class="memory-text">
-                        This section can be another date, trip,
-                        celebration, random adventure, or literally
-                        anything you want to remember.
-                    </p>
-
-                    <span class="heart-divider">♡</span>
-
-                </div>
-
-                <div class="memory-photo">
-
-                    <div class="polaroid rotate-right">
-
-                        <div class="photo-wrapper">
-                            <img
-                                src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=900&q=80"
-                                alt="Memory placeholder"
-                            >
-                        </div>
-
-                        <p>still smiling ♡</p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ==================== LITTLE THINGS ==================== -->
-
-        <section class="little-things section">
-
-            <div class="section-inner">
-
-                <div class="reveal">
-
-                    <span class="chapter-label">THE LITTLE THINGS</span>
-
-                    <h2>
-                        It's not just<br>
-                        the big moments.
-                    </h2>
-
-                    <p class="section-description">
-                        It's all the tiny things that make being
-                        with you feel special.
-                    </p>
-
-                </div>
-
-
-                <div class="reasons-grid">
-
-                    <div class="reason-card reveal">
-                        <span>♡</span>
-                        <h3>Your smile</h3>
-                        <p>
-                            Because somehow it can make an ordinary
-                            day feel a little better.
-                        </p>
-                    </div>
-
-                    <div class="reason-card reveal">
-                        <span>✦</span>
-                        <h3>Your laugh</h3>
-                        <p>
-                            One of my favorite sounds, especially
-                            when I know I caused it.
-                        </p>
-                    </div>
-
-                    <div class="reason-card reveal">
-                        <span>♡</span>
-                        <h3>Being with you</h3>
-                        <p>
-                            Even when we're doing absolutely nothing,
-                            I still wouldn't rather be anywhere else.
-                        </p>
-                    </div>
-
-                    <div class="reason-card reveal">
-                        <span>✧</span>
-                        <h3>Just being you</h3>
-                        <p>
-                            There's nobody else I'd want to make
-                            all these memories with.
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ==================== LOVE LETTER ==================== -->
-
-        <section class="letter-section section">
-
-            <div class="letter-container reveal">
-
-                <span class="chapter-label">A LETTER FOR YOU</span>
-
-                <h2>
-                    Dear Kai,
-                </h2>
-
-                <div class="letter">
-
-                    <p>
-                        Happy birthday to one of the most important
-                        people in my life.
-                    </p>
-
-                    <p>
-                        I don't think I say it enough, but I really
-                        appreciate you. I appreciate every moment
-                        we've spent together, every conversation,
-                        every laugh, every little memory that we've
-                        made along the way.
-                    </p>
-
-                    <p>
-                        Looking back at all these moments makes me
-                        realize just how lucky I am to have you in
-                        my life.
-                    </p>
-
-                    <p>
-                        Thank you for being someone I can laugh with,
-                        make memories with, and simply be myself around.
-                    </p>
-
-                    <p>
-                        I love you more than I probably know how to
-                        put into words, and I hope I can keep making
-                        you happy for a very, very long time.
-                    </p>
-
-                    <p>
-                        Here's to all the memories we've already made,
-                        and all the ones we haven't made yet.
-                    </p>
-
-                    <div class="signature">
-                        With all my love,<br>
-                        <span>♡ Me</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ==================== FINAL ==================== -->
-
-        <section class="final-section">
-
-            <div class="final-content reveal">
-
-                <div class="final-heart">♡</div>
-
-                <p class="eyebrow">
-                    AND THIS IS ONLY THE BEGINNING
-                </p>
-
-                <h2>
-                    Happy Birthday,<br>
-                    <span>Kai.</span>
-                </h2>
-
-                <p>
-                    Here's to every date we haven't gone on,<br>
-                    every picture we haven't taken,<br>
-                    and every memory we haven't made yet.
-                </p>
-
-                <button class="replay-button" id="replayButton">
-                    ↻ &nbsp; Start our story again
-                </button>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- ==================== FOOTER ==================== -->
-
-    <footer>
-        <p>made with ♡ for Kai</p>
-    </footer>
-
-
-    <script src="script.js"></script>
-
-</body>
-</html>
+/* =========================================
+   OUR STORY — MAIN STYLES
+   ========================================= */
+
+:root {
+    --background: #fffaf7;
+    --background-soft: #fff3f0;
+    --pink: #e98f9d;
+    --pink-dark: #c96f7c;
+    --text: #40363a;
+    --text-light: #817477;
+    --white: #ffffff;
+    --line: #eadbdd;
+
+    --heading-font: "DM Sans", sans-serif;
+    --script-font: "Pacifico", cursive;
+
+    --max-width: 1100px;
+}
+
+
+/* =========================================
+   RESET
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: var(--heading-font);
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================
+   FLOATING DECORATIONS
+   ========================================= */
+
+.floating-decorations {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 20;
+    overflow: hidden;
+}
+
+.floating-decorations span {
+    position: absolute;
+    color: var(--pink);
+    opacity: 0.15;
+    font-size: 20px;
+    animation: floatAround 12s infinite ease-in-out;
+}
+
+.floating-decorations span:nth-child(1) {
+    left: 8%;
+    top: 20%;
+    animation-delay: 0s;
+}
+
+.floating-decorations span:nth-child(2) {
+    left: 88%;
+    top: 15%;
+    animation-delay: 2s;
+}
+
+.floating-decorations span:nth-child(3) {
+    left: 15%;
+    top: 75%;
+    animation-delay: 4s;
+}
+
+.floating-decorations span:nth-child(4) {
+    left: 80%;
+    top: 70%;
+    animation-delay: 6s;
+}
+
+.floating-decorations span:nth-child(5) {
+    left: 50%;
+    top: 10%;
+    animation-delay: 3s;
+}
+
+.floating-decorations span:nth-child(6) {
+    left: 65%;
+    top: 90%;
+    animation-delay: 5s;
+}
+
+@keyframes floatAround {
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-30px) rotate(15deg);
+    }
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+    min-height: 100svh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(233, 143, 157, 0.14),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(233, 143, 157, 0.12),
+            transparent 30%
+        ),
+        var(--background);
+}
+
+.hero::before {
+    content: "♡";
+    position: absolute;
+    top: 12%;
+    left: 12%;
+    color: rgba(233, 143, 157, 0.18);
+    font-size: 80px;
+    transform: rotate(-20deg);
+}
+
+.hero::after {
+    content: "✦";
+    position: absolute;
+    bottom: 15%;
+    right: 12%;
+    color: rgba(233, 143, 157, 0.18);
+    font-size: 60px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    animation: heroEnter 1.2s ease forwards;
+}
+
+@keyframes heroEnter {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.eyebrow {
+    color: var(--pink-dark);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(70px, 13vw, 150px);
+    line-height: 0.85;
+    letter-spacing: -0.06em;
+    font-weight: 700;
+}
+
+.hero h1 span {
+    font-family: var(--script-font);
+    color: var(--pink);
+    font-weight: 400;
+}
+
+.hero-subtitle {
+    margin-top: 35px;
+    color: var(--text-light);
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.start-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 40px;
+    padding: 15px 25px;
+    border: 1px solid var(--line);
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 600;
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.start-button:hover {
+    transform: translateY(-4px);
+    background: var(--white);
+    box-shadow: 0 12px 30px rgba(80, 40, 50, 0.1);
+}
+
+.start-button span {
+    color: var(--pink-dark);
+    font-size: 18px;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-light);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.scroll-line {
+    width: 1px;
+    height: 40px;
+    background: var(--pink);
+    animation: scrollPulse 1.8s infinite;
+}
+
+@keyframes scrollPulse {
+    0%,
+    100% {
+        transform: scaleY(0.5);
+        transform-origin: top;
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+   ========================================= */
+
+.section {
+    padding: 150px 30px;
+}
+
+.section-inner {
+    width: min(100%, var(--max-width));
+    margin: 0 auto;
+}
+
+.chapter-label {
+    display: block;
+    margin-bottom: 25px;
+    color: var(--pink-dark);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+}
+
+.section h2 {
+    font-size: clamp(45px, 7vw, 80px);
+    line-height: 1;
+    letter-spacing: -0.05em;
+}
+
+.section h2 em,
+.memory-content h2 em {
+    color: var(--pink);
+    font-family: var(--script-font);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.section-description {
+    max-width: 500px;
+    margin-top: 30px;
+    color: var(--text-light);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   INTRO
+   ========================================= */
+
+.intro {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    background: var(--background-soft);
+}
+
+.intro p {
+    max-width: 550px;
+    margin-top: 30px;
+    color: var(--text-light);
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   MEMORY SECTIONS
+   ========================================= */
+
+.memory-section {
+    padding: 140px 30px;
+}
+
+.memory-section.alternate {
+    background: var(--background-soft);
+}
+
+.memory-container {
+    width: min(100%, var(--max-width));
+    min-height: 650px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 100px;
+}
+
+.memory-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.polaroid {
+    width: min(100%, 440px);
+    padding: 16px 16px 45px;
+    background: white;
+    box-shadow: 0 20px 45px rgba(60, 30, 40, 0.12);
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+.polaroid:hover {
+    transform: rotate(0deg) translateY(-10px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(60, 30, 40, 0.16);
+}
+
+.rotate-left {
+    transform: rotate(-3deg);
+}
+
+.rotate-right {
+    transform: rotate(3deg);
+}
+
+.photo-wrapper {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: #eee;
+}
+
+.photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.polaroid p {
+    margin-top: 15px;
+    text-align: center;
+    font-family: var(--script-font);
+    color: var(--text);
+    font-size: 18px;
+}
+
+.memory-content {
+    max-width: 500px;
+}
+
+.chapter-number {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: var(--pink);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.memory-date {
+    margin-bottom: 20px;
+    color: var(--text-light);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+.memory-content h2 {
+    font-size: clamp(48px, 6vw, 75px);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+}
+
+.memory-text {
+    max-width: 450px;
+    margin-top: 35px;
+    color: var(--text-light);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.heart-divider {
+    display: block;
+    margin-top: 35px;
+    color: var(--pink);
+    font-size: 24px;
+}
+
+
+/* =========================================
+   LITTLE THINGS
+   ========================================= */
+
+.little-things {
+    background: var(--background);
+}
+
+.reasons-grid {
+    width: min(100%, var(--max-width));
+    margin: 80px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.reason-card {
+    padding: 45px;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.5);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.reason-card:hover {
+    transform: translateY(-5px);
+    background: var(--white);
+}
+
+.reason-card > span {
+    display: block;
+    margin-bottom: 25px;
+    color: var(--pink);
+    font-size: 26px;
+}
+
+.reason-card h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.reason-card p {
+    color: var(--text-light);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   LOVE LETTER
+   ========================================= */
+
+.letter-section {
+    background: var(--background-soft);
+}
+
+.letter-container {
+    width: min(100%, 850px);
+    margin: 0 auto;
+}
+
+.letter-container h2 {
+    font-family: var(--script-font);
+    color: var(--pink);
+    font-size: clamp(50px, 7vw, 80px);
+    font-weight: 400;
+}
+
+.letter {
+    margin-top: 55px;
+    padding: 60px;
+
+    background: var(--white);
+    box-shadow: 0 25px 60px rgba(60, 30, 40, 0.08);
+
+    font-size: 17px;
+    line-height: 2;
+}
+
+.letter p + p {
+    margin-top: 25px;
+}
+
+.signature {
+    margin-top: 45px;
+    color: var(--text-light);
+}
+
+.signature span {
+    color: var(--pink);
+    font-family: var(--script-font);
+    font-size: 24px;
+}
+
+
+/* =========================================
+   FINAL SECTION
+   ========================================= */
+
+.final-section {
+    min-height: 100svh;
+    padding: 100px 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(233, 143, 157, 0.16),
+            transparent 55%
+        ),
+        var(--background);
+}
+
+.final-content {
+    max-width: 800px;
+}
+
+.final-heart {
+    margin-bottom: 30px;
+    color: var(--pink);
+    font-size: 50px;
+    animation: heartBeat 1.8s infinite;
+}
+
+@keyframes heartBeat {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.15);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.08);
+    }
+}
+
+.final-content h2 {
+    font-size: clamp(55px, 9vw, 100px);
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+}
+
+.final-content h2 span {
+    color: var(--pink);
+    font-family: var(--script-font);
+    font-weight: 400;
+}
+
+.final-content > p:not(.eyebrow) {
+    margin-top: 35px;
+    color: var(--text-light);
+    font-size: 16px;
+    line-height: 2;
+}
+
+.replay-button {
+    margin-top: 45px;
+    padding: 14px 22px;
+
+    border: 1px solid var(--line);
+    border-radius: 100px;
+
+    background: white;
+    color: var(--text);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.replay-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(60, 30, 40, 0.1);
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    padding: 30px;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 12px;
+}
+
+
+/* =========================================
+   SCROLL REVEAL
+   ========================================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 750px) {
+
+    .hero h1 {
+        font-size: clamp(65px, 20vw, 100px);
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+    }
+
+    .section,
+    .memory-section {
+        padding: 100px 20px;
+    }
+
+    .memory-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        min-height: auto;
+    }
+
+    .memory-content {
+        max-width: none;
+    }
+
+    .memory-section.alternate .memory-content {
+        order: 1;
+    }
+
+    .memory-section.alternate .memory-photo {
+        order: 2;
+    }
+
+    .polaroid {
+        width: min(100%, 380px);
+    }
+
+    .reasons-grid {
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+    }
+
+    .reason-card {
+        padding: 35px;
+    }
+
+    .letter {
+        padding: 35px 25px;
+        font-size: 15px;
+        line-height: 1.9;
+    }
+
+    .floating-decorations span {
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
