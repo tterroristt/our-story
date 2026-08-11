@@ -401,6 +401,37 @@ a {
     transform: rotate(4deg);
   }
 
+/* Chapter with two-photo stack */
+
+.memory--double .polaroid-stack {
+  position: relative;
+
+  width: 460px;
+  height: 500px;
+
+  margin: 0 auto;
+}
+
+.memory--double .polaroid-stack .polaroid {
+  position: absolute;
+
+  width: 310px;
+}
+
+.memory--double .polaroid--back {
+  top: 0;
+  left: 0;
+
+  transform: rotate(-5deg);
+}
+
+.memory--double .polaroid--front {
+  top: 115px;
+  right: 0;
+
+  transform: rotate(4deg);
+}
+
 /* Memory copy */
 
 .memory__copy {
@@ -1078,7 +1109,46 @@ a {
 
 @media (max-width: 430px) {
 
-
+   .memory--double {
+     padding-top: 55px;
+   }
+   
+   .memory--double .memory__layout {
+     gap: 28px;
+   }
+   
+   .memory--double .polaroid-stack {
+     width: 100%;
+     max-width: 330px;
+     height: 335px;
+   
+     margin: 0 auto;
+   }
+   
+   .memory--double .polaroid-stack .polaroid {
+     width: 200px;
+   
+     padding: 8px 8px 25px;
+   }
+   
+   .memory--double .polaroid--back {
+     top: 0;
+     left: 5px;
+   
+     transform: rotate(-5deg);
+   }
+   
+   .memory--double .polaroid--front {
+     top: 95px;
+     right: 5px;
+   
+     transform: rotate(4deg);
+   }
+   
+   .memory--double .polaroid figcaption {
+     margin-top: 7px;
+     font-size: 9px;
+   }
     /* Hero */
 
     .hero {
