@@ -542,55 +542,112 @@ button {
 
 
 /* =========================================
-   LITTLE THINGS
+   STILL TO COME
    ========================================= */
 
-.little-things {
+.future-section {
     background: var(--background);
 }
 
-.reasons-grid {
-    width: min(100%, var(--max-width));
-    margin: 80px auto 0;
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+.future-heading {
+    max-width: 750px;
 }
 
-.reason-card {
-    padding: 45px;
-    border: 1px solid var(--line);
-    background: rgba(255, 255, 255, 0.5);
+.future-heading h2 {
+    font-size: clamp(45px, 7vw, 80px);
+    line-height: 1;
+    letter-spacing: -0.05em;
+}
+
+.future-heading h2 em {
+    color: var(--pink);
+    font-family: var(--script-font);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.future-list {
+    margin-top: 80px;
+    border-top: 1px solid var(--line);
+}
+
+.future-card {
+    display: grid;
+    grid-template-columns: 60px 1fr 50px;
+    gap: 30px;
+    align-items: center;
+
+    padding: 40px 10px;
+
+    border-bottom: 1px solid var(--line);
 
     transition:
-        transform 0.3s ease,
+        padding 0.3s ease,
         background 0.3s ease;
 }
 
-.reason-card:hover {
-    transform: translateY(-5px);
-    background: var(--white);
+.future-card:hover {
+    padding-left: 25px;
+    padding-right: 25px;
+
+    background: rgba(255, 255, 255, 0.6);
 }
 
-.reason-card > span {
-    display: block;
-    margin-bottom: 25px;
+.future-number {
     color: var(--pink);
-    font-size: 26px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
 }
 
-.reason-card h3 {
-    margin-bottom: 15px;
-    font-size: 22px;
+.future-card h3 {
+    margin-bottom: 8px;
+
+    font-size: 24px;
+    font-weight: 600;
 }
 
-.reason-card p {
+.future-card p {
+    max-width: 600px;
+
     color: var(--text-light);
+
     font-size: 15px;
     line-height: 1.8;
 }
 
+.future-icon {
+    justify-self: end;
+
+    color: var(--pink);
+
+    font-size: 28px;
+}
+
+.future-ending {
+    margin-top: 100px;
+
+    text-align: center;
+}
+
+.future-ending > span {
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: var(--pink);
+
+    font-size: 35px;
+}
+
+.future-ending p {
+    color: var(--text);
+
+    font-family: var(--script-font);
+
+    font-size: clamp(25px, 5vw, 38px);
+    line-height: 1.5;
+}
 
 /* =========================================
    LOVE LETTER
