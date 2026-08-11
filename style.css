@@ -1,1339 +1,604 @@
+"use strict";
+
+
 /* ==========================================================
    OUR STORY
    ========================================================== */
 
 
 /* ==========================================================
-   DESIGN TOKENS
+   DOM REFERENCES
    ========================================================== */
 
-:root {
-    --background: #faf7f2;
-    --background-soft: #f5ebe8;
-    --paper: #fffdf9;
+const revealElements =
+    document.querySelectorAll(".reveal");
 
-    --text: #332d2f;
-    --text-muted: #776d70;
+const cake =
+    document.getElementById("cake");
 
-    --accent: #e78d9c;
-    --accent-dark: #c96d7d;
+const wishButton =
+    document.getElementById("wishButton");
 
-    --border: rgba(51, 45, 47, 0.12);
+const tapBlowButton =
+    document.getElementById("tapBlowButton");
 
-    --heading-font:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
+const cakeInstruction =
+    document.getElementById("cakeInstruction");
 
-    --body-font:
-        "DM Sans",
-        Arial,
-        sans-serif;
+const wishResult =
+    document.getElementById("wishResult");
 
-    --page-width: 1080px;
-    --reading-width: 850px;
-}
 
+const prefersReducedMotion =
+    window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
 
-/* ==========================================================
-   RESET
-   ========================================================== */
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-    -webkit-text-size-adjust: 100%;
-}
-
-body {
-    min-width: 320px;
-    margin: 0;
-
-    overflow-x: hidden;
-
-    background: var(--background);
-    color: var(--text);
-
-    font-family: var(--body-font);
-
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
-
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-}
-
-h1,
-h2,
-h3,
-p,
-figure {
-    margin: 0;
-}
-
-img {
-    display: block;
-
-    width: 100%;
-    max-width: 100%;
-}
-
-button,
-a {
-    font: inherit;
-}
-
-button {
-    color: inherit;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-
-/* ==========================================================
-   SHARED COMPONENTS
-   ========================================================== */
-
-.content {
-    width: min(100%, var(--page-width));
-    margin: 0 auto;
-}
-
-.content--narrow {
-    max-width: var(--reading-width);
-}
-
-.eyebrow,
-.section-label {
-    color: var(--accent-dark);
-
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.24em;
-    line-height: 1.5;
-
-    text-transform: uppercase;
-}
-
-.section-label {
-    margin-bottom: 22px;
-}
-
-.display-heading {
-    color: var(--text);
-
-    font-family: var(--heading-font);
-    font-size: clamp(54px, 7vw, 82px);
-    font-weight: 500;
-
-    line-height: 0.95;
-    letter-spacing: -0.04em;
-}
-
-.display-heading em {
-    color: var(--accent);
-
-    font-style: italic;
-    font-weight: 500;
-}
-
-.small-divider {
-    display: block;
-
-    width: 44px;
-    height: 1px;
-
-    margin: 42px 0 26px;
-
-    background: var(--accent);
-}
-
-.subtle-heart {
-    display: block;
-
-    margin-top: 24px;
-
-    color: var(--accent);
-
-    font-family: var(--heading-font);
-    font-size: 18px;
-}
-
-
-/* ==========================================================
-   HERO
-   ========================================================== */
-
-.hero {
-    position: relative;
-
-    min-height: 100vh;
-    min-height: 100svh;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 80px 24px;
-
-    background: var(--background);
-
-    text-align: center;
-}
-
-.hero__content {
-    width: min(100%, 850px);
-}
-
-.hero .eyebrow {
-    margin-bottom: 24px;
-}
-
-.hero__title {
-    color: var(--accent);
-
-    font-family: var(--heading-font);
-    font-size: clamp(72px, 11vw, 130px);
-    font-style: italic;
-    font-weight: 500;
-
-    line-height: 0.9;
-    letter-spacing: -0.045em;
-}
-
-
-/* Scroll hint */
-
-.scroll-hint {
-    position: absolute;
-    bottom: 28px;
-    left: 50%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-
-    transform: translateX(-50%);
-
-    color: var(--text-muted);
-
-    font-size: 9px;
-    font-weight: 500;
-    letter-spacing: 0.2em;
-
-    text-transform: uppercase;
-}
-
-.scroll-hint__line {
-    display: block;
-
-    width: 1px;
-    height: 34px;
-
-    background: var(--accent);
-
-    opacity: 0.7;
-}
-
-
-/* ==========================================================
-   STORY INTRO
-   ========================================================== */
-
-.story-intro {
-    padding: 130px 24px;
-
-    background: var(--background-soft);
-}
-
-.intro-copy {
-    max-width: 540px;
-
-    margin-top: 30px;
-
-    color: var(--text-muted);
-
-    font-size: 15px;
-    line-height: 1.85;
-}
-
-
-/* ==========================================================
-   MEMORY SECTIONS
-   ========================================================== */
-
-.memory {
-    padding: 125px 24px;
-
-    background: var(--background);
-}
-
-.memory--soft {
-    background: var(--background-soft);
-}
-
-.memory__layout {
-    width: min(100%, var(--page-width));
-    margin: 0 auto;
-
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 1.05fr)
-        minmax(280px, 0.95fr);
-
-    align-items: center;
-
-    gap: clamp(60px, 9vw, 120px);
-}
-
-
-/* Memory photo */
-
-.memory__photo {
-    display: flex;
-    justify-content: center;
-}
-
-.polaroid {
-    width: min(100%, 420px);
-
-    padding:
-        12px
-        12px
-        38px;
-
-    background: var(--paper);
-
-    box-shadow:
-        0 2px 5px rgba(34, 27, 29, 0.035),
-        0 18px 45px rgba(34, 27, 29, 0.075);
-}
-
-.polaroid--left {
-    transform: rotate(-1.25deg);
-}
-
-.polaroid--right {
-    transform: rotate(1.25deg);
-}
-
-.polaroid__image {
-    width: 100%;
-
-    aspect-ratio: 4 / 5;
-
-    overflow: hidden;
-
-    background: #e8e1dc;
-}
-
-.polaroid__image img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-}
-
-.polaroid figcaption {
-    margin-top: 13px;
-
-    color: var(--text-muted);
-
-    font-size: 11px;
-    letter-spacing: 0.03em;
-
-    text-align: center;
-}
-
-
-/* Memory copy */
-
-.memory__copy {
-    max-width: 430px;
-}
-
-.memory__number {
-    display: block;
-
-    margin-bottom: 12px;
-
-    color: var(--accent);
-
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-}
-
-.memory__meta {
-    margin-bottom: 22px;
-
-    color: var(--text-muted);
-
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    line-height: 1.5;
-
-    text-transform: uppercase;
-}
-
-.memory__title {
-    color: var(--text);
-
-    font-family: var(--heading-font);
-    font-size: clamp(50px, 6vw, 72px);
-    font-weight: 500;
-
-    line-height: 0.94;
-    letter-spacing: -0.035em;
-}
-
-.memory__title em {
-    color: var(--accent);
-
-    font-style: italic;
-    font-weight: 500;
-}
-
-.memory__text {
-    max-width: 430px;
-
-    margin-top: 28px;
-
-    color: var(--text-muted);
-
-    font-size: 15px;
-    line-height: 1.85;
-}
-
-
-/* ==========================================================
-   STILL TO COME
-   ========================================================== */
-
-.future {
-    padding: 140px 24px;
-
-    background: var(--background);
-}
-
-.future__title {
-    color: var(--text);
-
-    font-family: var(--heading-font);
-    font-size: clamp(54px, 8vw, 90px);
-    font-weight: 500;
-
-    line-height: 0.92;
-    letter-spacing: -0.045em;
-}
-
-.future__title em {
-    color: var(--accent);
-
-    font-style: italic;
-    font-weight: 500;
-}
-
-.future__copy {
-    max-width: 500px;
-
-    color: var(--text-muted);
-
-    font-size: 14px;
-    line-height: 1.8;
-}
-
-
-/* ==========================================================
-   LETTER
-   ========================================================== */
-
-.letter-section {
-    padding: 140px 24px;
-
-    background: var(--background-soft);
-}
-
-.letter-wrapper {
-    width: min(100%, 760px);
-    margin: 0 auto;
-}
-
-.letter-heading {
-    color: var(--text);
-
-    font-family: var(--heading-font);
-    font-size: clamp(60px, 8vw, 88px);
-    font-style: italic;
-    font-weight: 500;
-
-    line-height: 0.95;
-    letter-spacing: -0.04em;
-}
-
-.letter {
-    margin-top: 48px;
-
-    padding: clamp(34px, 7vw, 64px);
-
-    background: var(--paper);
-
-    border: 1px solid rgba(51, 45, 47, 0.055);
-
-    box-shadow:
-        0 2px 4px rgba(34, 27, 29, 0.025),
-        0 22px 55px rgba(34, 27, 29, 0.065);
-
-    font-size: 15px;
-    line-height: 1.95;
-}
-
-.letter p + p {
-    margin-top: 24px;
-}
-
-.letter__signature {
-    margin-top: 42px;
-
-    color: var(--text-muted);
-
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-.letter__signature span,
-.letter__signature strong {
-    display: block;
-}
-
-.letter__signature strong {
-    margin-top: 4px;
-
-    color: var(--accent-dark);
-
-    font-family: var(--heading-font);
-    font-size: 27px;
-    font-style: italic;
-    font-weight: 500;
-}
-
-
-/* ==========================================================
-   BIRTHDAY MESSAGE
-   ========================================================== */
-
-.birthday {
-    min-height: 85vh;
-    min-height: 85svh;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 100px 24px;
-
-    background: var(--background);
-
-    text-align: center;
-}
-
-.birthday__content {
-    width: min(100%, 750px);
-}
-
-.birthday__heart {
-    display: block;
-
-    margin-bottom: 24px;
-
-    color: var(--accent);
-
-    font-family: var(--heading-font);
-    font-size: 28px;
-}
-
-.birthday .eyebrow {
-    margin-bottom: 24px;
-}
-
-.birthday__title {
-    color: var(--text);
-
-    font-family: var(--heading-font);
-    font-size: clamp(64px, 10vw, 108px);
-    font-weight: 500;
-
-    line-height: 0.86;
-    letter-spacing: -0.05em;
-}
-
-.birthday__title em {
-    color: var(--accent);
-
-    font-style: italic;
-    font-weight: 500;
-}
-
-.birthday__copy {
-    max-width: 480px;
-
-    margin: 34px auto 0;
-
-    color: var(--text-muted);
-
-    font-size: 14px;
-    line-height: 1.9;
-}
-
-
-/* ==========================================================
-   BIRTHDAY CAKE SECTION
-   ========================================================== */
-
-.cake-section {
-    min-height: 90vh;
-    min-height: 90svh;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 130px 24px;
-
-    background: var(--background-soft);
-
-    text-align: center;
-}
-
-.cake-section__content {
-    width: min(100%, 650px);
-    margin: 0 auto;
-}
-
-.cake-section__title {
-    color: var(--text);
-
-    font-family: var(--heading-font);
-    font-size: clamp(62px, 9vw, 96px);
-    font-style: italic;
-    font-weight: 500;
-
-    line-height: 0.95;
-    letter-spacing: -0.045em;
-}
-
-.cake-section__instruction {
-    margin-top: 22px;
-
-    color: var(--text-muted);
-
-    font-size: 13px;
-    line-height: 1.7;
-}
-
-
-/* ==========================================================
-   CAKE
-   ========================================================== */
-
-.cake {
-    position: relative;
-
-    width: 260px;
-    height: 260px;
-
-    margin: 65px auto 30px;
-}
-
-
-/* Candles */
-
-.candles {
-    position: absolute;
-    top: 0;
-    left: 50%;
-
-    z-index: 4;
-
-    display: flex;
-    gap: 28px;
-
-    transform: translateX(-50%);
-}
-
-.candle {
-    position: relative;
-
-    display: block;
-
-    width: 9px;
-    height: 55px;
-
-    border-radius: 3px 3px 0 0;
-
-    background:
-        repeating-linear-gradient(
-            45deg,
-            #f5a0ad 0,
-            #f5a0ad 6px,
-            #fff6f4 6px,
-            #fff6f4 12px
-        );
-}
-
-
-/* Candle flames */
-
-.flame {
-    position: absolute;
-    top: -28px;
-    left: 50%;
-
-    width: 15px;
-    height: 24px;
-
-    border-radius:
-        50%
-        50%
-        45%
-        45%;
-
-    background: #f4b35d;
-
-    box-shadow:
-        0 0 12px
-        rgba(244, 179, 93, 0.45);
-
-    transform:
-        translateX(-50%)
-        rotate(4deg);
-
-    transform-origin: center bottom;
-
-    animation:
-        candle-flicker
-        900ms
-        ease-in-out
-        infinite
-        alternate;
-
-    transition:
-        opacity 300ms ease,
-        transform 300ms ease;
-}
-
-@keyframes candle-flicker {
-
-    from {
-        transform:
-            translateX(-50%)
-            rotate(-4deg)
-            scale(0.94);
-    }
-
-    to {
-        transform:
-            translateX(-50%)
-            rotate(5deg)
-            scale(1.04);
-    }
-
-}
-
-
-/* Cake top */
-
-.cake__top {
-    position: absolute;
-    top: 50px;
-    left: 50%;
-
-    z-index: 3;
-
-    width: 210px;
-    height: 48px;
-
-    border-radius: 50%;
-
-    background: #f8cbd2;
-
-    transform: translateX(-50%);
-}
-
-
-/* Cake body */
-
-.cake__body {
-    position: absolute;
-    top: 73px;
-    left: 50%;
-
-    z-index: 2;
-
-    width: 210px;
-    height: 125px;
-
-    overflow: hidden;
-
-    border-radius: 0 0 18px 18px;
-
-    background: #ef9cab;
-
-    transform: translateX(-50%);
-}
-
-
-/* Icing */
-
-.icing {
-    position: absolute;
-    top: -5px;
-
-    display: block;
-
-    width: 30px;
-
-    border-radius: 0 0 20px 20px;
-
-    background: #f8cbd2;
-}
-
-.icing--one {
-    left: 28px;
-    height: 40px;
-}
-
-.icing--two {
-    left: 92px;
-    height: 27px;
-}
-
-.icing--three {
-    right: 25px;
-    height: 48px;
-}
-
-
-/* Plate */
-
-.cake__plate {
-    position: absolute;
-    bottom: 44px;
-    left: 50%;
-
-    z-index: 1;
-
-    width: 250px;
-    height: 18px;
-
-    border-radius: 50%;
-
-    background: #e5ddd7;
-
-    transform: translateX(-50%);
-}
-
-
-/* ==========================================================
-   CAKE CONTROLS
-   ========================================================== */
-
-.cake-controls {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-.pill-button {
-    min-height: 44px;
-
-    padding: 11px 21px;
-
-    border: 1px solid var(--border);
-    border-radius: 999px;
-
-    background: var(--paper);
-    color: var(--text);
-
-    font-size: 13px;
-    font-weight: 500;
-
-    cursor: pointer;
-
-    -webkit-appearance: none;
-    appearance: none;
-
-    transition:
-        border-color 180ms ease,
-        opacity 180ms ease;
-}
-
-.pill-button:hover {
-    border-color:
-        rgba(51, 45, 47, 0.25);
-}
-
-.pill-button:disabled {
-    opacity: 0.55;
-
-    cursor: default;
-}
-
-.pill-button--secondary {
-    background: transparent;
-}
-
-
-/* ==========================================================
-   BLOWN CANDLES
-   ========================================================== */
-
-.cake.is-blown .flame {
-    opacity: 0;
-
-    animation: none;
-
-    transform:
-        translateX(-50%)
-        translateY(-8px)
-        scale(0.2);
-}
-
-
-/* ==========================================================
-   WISH RESULT
-   ========================================================== */
-
-.wish-result {
-    max-height: 0;
-
-    margin-top: 0;
-
-    overflow: hidden;
-
-    opacity: 0;
-
-    transform: translateY(10px);
-
-    transition:
-        max-height 700ms ease,
-        margin-top 700ms ease,
-        opacity 700ms ease,
-        transform 700ms ease;
-}
-
-.wish-result.is-visible {
-    max-height: 180px;
-
-    margin-top: 45px;
-
-    opacity: 1;
-
-    transform: none;
-}
-
-.wish-result > span {
-    display: block;
-
-    margin-bottom: 12px;
-
-    color: var(--accent);
-
-    font-family: var(--heading-font);
-    font-size: 25px;
-}
-
-.wish-result p {
-    color: var(--text);
-
-    font-family: var(--heading-font);
-    font-size: clamp(32px, 5vw, 44px);
-    font-style: italic;
-    font-weight: 500;
-
-    line-height: 1.15;
-}
-
-
-/* ==========================================================
-   FOOTER
-   ========================================================== */
-
-.footer {
-    padding:
-        28px
-        24px
-        calc(28px + env(safe-area-inset-bottom));
-
-    background: var(--background-soft);
-
-    color: var(--text-muted);
-
-    font-size: 10px;
-    letter-spacing: 0.08em;
-
-    text-align: center;
-}
 
 
 /* ==========================================================
    SCROLL REVEAL
    ========================================================== */
 
-.reveal {
-    opacity: 0;
+function setupScrollReveal() {
 
-    transform: translateY(18px);
+    if (prefersReducedMotion) {
 
-    transition:
-        opacity 700ms ease,
-        transform 700ms ease;
-}
+        revealElements.forEach((element) => {
+            element.classList.add("is-visible");
+        });
 
-.reveal.is-visible {
-    opacity: 1;
-
-    transform: none;
-}
-
-
-/* ==========================================================
-   TABLETS
-   ========================================================== */
-
-@media (max-width: 800px) {
-
-    .memory__layout {
-        gap: 55px;
+        return;
     }
 
-    .memory__title {
-        font-size: 54px;
-    }
-
-}
-
-
-/* ==========================================================
-   MOBILE
-   Optimized around iPhone XS: 375 × 812
-   ========================================================== */
-
-@media (max-width: 430px) {
-
-
-    /* Hero */
-
-    .hero {
-        padding:
-            calc(60px + env(safe-area-inset-top))
-            20px
-            calc(55px + env(safe-area-inset-bottom));
-    }
-
-    .hero .eyebrow {
-        margin-bottom: 22px;
-    }
-
-    .hero__title {
-        font-size: 74px;
-        line-height: 0.92;
-    }
-
-    .scroll-hint {
-        bottom:
-            calc(
-                20px +
-                env(safe-area-inset-bottom)
-            );
-    }
-
-
-    /* Shared */
-
-    .section-label {
-        margin-bottom: 18px;
-
-        font-size: 9px;
-    }
-
-
-    /* Intro */
-
-    .story-intro {
-        padding: 88px 20px;
-    }
-
-    .display-heading {
-        font-size: 54px;
-        line-height: 0.96;
-    }
-
-    .intro-copy {
-        margin-top: 25px;
-
-        font-size: 14px;
-        line-height: 1.8;
-    }
-
-
-    /* Memories */
-
-    .memory {
-        padding: 88px 20px;
-    }
-
-    .memory__layout {
-        display: flex;
-        flex-direction: column;
-
-        gap: 48px;
-    }
 
     /*
-       Photos always appear first on mobile.
+       IntersectionObserver is more efficient than listening
+       to every scroll event.
     */
 
-    .memory--soft .memory__photo {
-        order: 1;
-    }
+    const observer =
+        new IntersectionObserver(
 
-    .memory--soft .memory__copy {
-        order: 2;
-    }
+            (entries, currentObserver) => {
 
-    .memory__photo {
-        width: 100%;
-    }
+                entries.forEach((entry) => {
 
-    .polaroid {
-        width: 92%;
-        max-width: 330px;
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
 
-        padding:
-            10px
-            10px
-            33px;
-    }
+                    entry.target.classList.add(
+                        "is-visible"
+                    );
 
-    .polaroid--left {
-        transform: rotate(-1deg);
-    }
+                    currentObserver.unobserve(
+                        entry.target
+                    );
 
-    .polaroid--right {
-        transform: rotate(1deg);
-    }
+                });
 
-    .polaroid figcaption {
-        margin-top: 11px;
+            },
 
-        font-size: 10px;
-    }
+            {
+                threshold: 0.12,
+                rootMargin:
+                    "0px 0px -40px 0px"
+            }
 
-    .memory__copy {
-        width: 100%;
-        max-width: none;
-    }
-
-    .memory__number {
-        font-size: 10px;
-    }
-
-    .memory__meta {
-        margin-bottom: 18px;
-
-        font-size: 9px;
-    }
-
-    .memory__title {
-        font-size: 53px;
-        line-height: 0.95;
-    }
-
-    .memory__text {
-        margin-top: 24px;
-
-        font-size: 14px;
-        line-height: 1.8;
-    }
+        );
 
 
-    /* Future */
-
-    .future {
-        padding: 90px 20px;
-    }
-
-    .future__title {
-        font-size: 53px;
-        line-height: 0.94;
-    }
-
-    .small-divider {
-        margin-top: 34px;
-    }
-
-
-    /* Letter */
-
-    .letter-section {
-        padding: 90px 20px;
-    }
-
-    .letter-heading {
-        font-size: 60px;
-    }
-
-    .letter {
-        margin-top: 36px;
-
-        padding: 32px 24px;
-
-        font-size: 14px;
-        line-height: 1.9;
-    }
-
-    .letter p + p {
-        margin-top: 21px;
-    }
-
-
-    /* Birthday */
-
-    .birthday {
-        min-height: 80vh;
-        min-height: 80svh;
-
-        padding:
-            85px
-            20px
-            calc(
-                70px +
-                env(safe-area-inset-bottom)
-            );
-    }
-
-    .birthday__title {
-        font-size: 68px;
-        line-height: 0.88;
-    }
-
-    .birthday__copy {
-        max-width: 330px;
-
-        margin-top: 28px;
-
-        font-size: 13px;
-        line-height: 1.85;
-    }
-
-
-    /* Cake */
-
-    .cake-section {
-        min-height: 90vh;
-        min-height: 90svh;
-
-        padding:
-            90px
-            20px
-            calc(
-                80px +
-                env(safe-area-inset-bottom)
-            );
-    }
-
-    .cake-section__title {
-        font-size: 62px;
-    }
-
-    .cake-section__instruction {
-        max-width: 280px;
-
-        margin:
-            20px
-            auto
-            0;
-    }
-
-    .cake {
-        width: 240px;
-        height: 245px;
-
-        margin-top: 58px;
-
-        transform: scale(0.92);
-    }
-
-    .wish-result p {
-        font-size: 34px;
-    }
+    revealElements.forEach((element) => {
+        observer.observe(element);
+    });
 
 }
+
 
 
 /* ==========================================================
-   VERY SMALL SCREENS
+   CAKE STATE
    ========================================================== */
 
-@media (max-width: 350px) {
+let candlesAreBlown = false;
 
-    .hero__title {
-        font-size: 65px;
-    }
+let microphoneStream = null;
+let audioContext = null;
+let analyser = null;
 
-    .display-heading,
-    .memory__title,
-    .future__title {
-        font-size: 48px;
-    }
+let detectionFrame = null;
 
-    .birthday__title {
-        font-size: 60px;
-    }
-
-}
 
 
 /* ==========================================================
-   REDUCED MOTION
+   COMPLETE THE WISH
    ========================================================== */
 
-@media (prefers-reduced-motion: reduce) {
+function blowOutCandles() {
 
-    html {
-        scroll-behavior: auto;
+    if (candlesAreBlown) {
+        return;
     }
 
-    .reveal {
-        opacity: 1;
 
-        transform: none;
+    candlesAreBlown = true;
 
-        transition: none;
+
+    cake.classList.add("is-blown");
+
+
+    cakeInstruction.textContent =
+        "you got them ♡";
+
+
+    wishButton.hidden = true;
+    tapBlowButton.hidden = true;
+
+
+    /*
+       Wait briefly so she sees the candles extinguish
+       before the final message appears.
+    */
+
+    window.setTimeout(() => {
+
+        wishResult.classList.add(
+            "is-visible"
+        );
+
+    }, 600);
+
+
+    stopMicrophone();
+
+}
+
+
+
+/* ==========================================================
+   MICROPHONE CLEANUP
+   ========================================================== */
+
+function stopMicrophone() {
+
+    if (detectionFrame !== null) {
+
+        cancelAnimationFrame(
+            detectionFrame
+        );
+
+        detectionFrame = null;
+
     }
 
-    .flame {
-        animation: none;
+
+    if (microphoneStream) {
+
+        microphoneStream
+            .getTracks()
+            .forEach((track) => {
+                track.stop();
+            });
+
+        microphoneStream = null;
+
     }
 
-    *,
-    *::before,
-    *::after {
-        transition-duration:
-            0.01ms !important;
+
+    if (
+        audioContext &&
+        audioContext.state !== "closed"
+    ) {
+
+        audioContext.close();
+
+    }
+
+
+    audioContext = null;
+    analyser = null;
+
+}
+
+
+
+/* ==========================================================
+   AUDIO VOLUME
+   ========================================================== */
+
+function calculateVolume(samples) {
+
+    let total = 0;
+
+
+    for (
+        let index = 0;
+        index < samples.length;
+        index++
+    ) {
+
+        /*
+           Audio samples arrive between 0 and 255.
+
+           Convert them to roughly -1 through +1.
+        */
+
+        const normalized =
+            (samples[index] - 128) / 128;
+
+
+        total +=
+            normalized * normalized;
+
+    }
+
+
+    /*
+       Root mean square gives us a simple measurement
+       of the current microphone loudness.
+    */
+
+    return Math.sqrt(
+        total / samples.length
+    );
+
+}
+
+
+
+/* ==========================================================
+   CALIBRATION
+   ========================================================== */
+
+function calibrateMicrophone(samples) {
+
+    return new Promise((resolve) => {
+
+        const measurements = [];
+
+        const startedAt =
+            performance.now();
+
+
+        function measureRoomNoise() {
+
+            analyser.getByteTimeDomainData(
+                samples
+            );
+
+
+            measurements.push(
+                calculateVolume(samples)
+            );
+
+
+            const elapsed =
+                performance.now() -
+                startedAt;
+
+
+            if (elapsed < 800) {
+
+                requestAnimationFrame(
+                    measureRoomNoise
+                );
+
+                return;
+
+            }
+
+
+            const averageNoise =
+                measurements.reduce(
+                    (sum, value) =>
+                        sum + value,
+                    0
+                ) /
+                measurements.length;
+
+
+            resolve(averageNoise);
+
+        }
+
+
+        measureRoomNoise();
+
+    });
+
+}
+
+
+
+/* ==========================================================
+   BLOW DETECTION
+   ========================================================== */
+
+function listenForBlow(
+    samples,
+    threshold
+) {
+
+    let loudFrames = 0;
+
+
+    function detect() {
+
+        if (
+            candlesAreBlown ||
+            !analyser
+        ) {
+            return;
+        }
+
+
+        analyser.getByteTimeDomainData(
+            samples
+        );
+
+
+        const volume =
+            calculateVolume(samples);
+
+
+        /*
+           One loud noise isn't enough.
+
+           The microphone has to stay above the threshold
+           for several frames, which makes accidental triggers
+           less likely.
+        */
+
+        if (volume > threshold) {
+
+            loudFrames += 1;
+
+        } else {
+
+            loudFrames =
+                Math.max(
+                    0,
+                    loudFrames - 1
+                );
+
+        }
+
+
+        if (loudFrames >= 7) {
+
+            blowOutCandles();
+
+            return;
+        }
+
+
+        detectionFrame =
+            requestAnimationFrame(
+                detect
+            );
+
+    }
+
+
+    detect();
+
+}
+
+
+
+/* ==========================================================
+   START MICROPHONE
+   ========================================================== */
+
+async function startBlowDetection() {
+
+    if (candlesAreBlown) {
+        return;
+    }
+
+
+    /*
+       Old browsers or unusual WebViews may not support
+       mediaDevices. Use the tap fallback in that case.
+    */
+
+    if (
+        !navigator.mediaDevices ||
+        !navigator.mediaDevices.getUserMedia
+    ) {
+
+        showTapFallback();
+
+        return;
+    }
+
+
+    wishButton.disabled = true;
+
+    wishButton.textContent =
+        "getting ready…";
+
+
+    cakeInstruction.textContent =
+        "allow microphone access ♡";
+
+
+    try {
+
+        microphoneStream =
+            await navigator.mediaDevices
+                .getUserMedia({
+
+                    audio: {
+                        echoCancellation: false,
+                        noiseSuppression: false,
+                        autoGainControl: false
+                    }
+
+                });
+
+
+        const BrowserAudioContext =
+            window.AudioContext ||
+            window.webkitAudioContext;
+
+
+        if (!BrowserAudioContext) {
+
+            showTapFallback();
+
+            return;
+        }
+
+
+        audioContext =
+            new BrowserAudioContext();
+
+
+        /*
+           iOS Safari may create the AudioContext
+           in a suspended state.
+        */
+
+        if (
+            audioContext.state ===
+            "suspended"
+        ) {
+
+            await audioContext.resume();
+
+        }
+
+
+        const microphoneSource =
+            audioContext
+                .createMediaStreamSource(
+                    microphoneStream
+                );
+
+
+        analyser =
+            audioContext.createAnalyser();
+
+
+        analyser.fftSize = 512;
+
+        analyser.smoothingTimeConstant =
+            0.2;
+
+
+        microphoneSource.connect(
+            analyser
+        );
+
+
+        const samples =
+            new Uint8Array(
+                analyser.fftSize
+            );
+
+
+        /*
+           Measure the room first so the blow threshold
+           adapts to her environment.
+        */
+
+        cakeInstruction.textContent =
+            "hold still for just a second…";
+
+
+        const roomNoise =
+            await calibrateMicrophone(
+                samples
+            );
+
+
+        /*
+           Never let the threshold get too low.
+
+           Otherwise a quiet room could make normal speech
+           extinguish the candles.
+        */
+
+        const blowThreshold =
+            Math.max(
+                0.06,
+                roomNoise * 3.2
+            );
+
+
+        wishButton.textContent =
+            "listening…";
+
+
+        cakeInstruction.textContent =
+            "okay… blow out the candles ♡";
+
+
+        listenForBlow(
+            samples,
+            blowThreshold
+        );
+
+    }
+
+    catch (error) {
+
+        console.warn(
+            "Microphone access failed:",
+            error
+        );
+
+
+        showTapFallback();
+
     }
 
 }
+
+
+
+/* ==========================================================
+   FALLBACK
+   ========================================================== */
+
+function showTapFallback() {
+
+    stopMicrophone();
+
+
+    wishButton.hidden = true;
+
+    tapBlowButton.hidden = false;
+
+
+    cakeInstruction.textContent =
+        "you can still make your wish ♡";
+
+}
+
+
+
+/* ==========================================================
+   EVENT LISTENERS
+   ========================================================== */
+
+wishButton.addEventListener(
+    "click",
+    startBlowDetection
+);
+
+
+tapBlowButton.addEventListener(
+    "click",
+    blowOutCandles
+);
+
+
+
+/* ==========================================================
+   INITIALIZE
+   ========================================================== */
+
+setupScrollReveal();
